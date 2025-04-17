@@ -1,19 +1,19 @@
 ---
-const { lang = 'en', t } = Astro.props;
+import '../styles/globals.css';
 ---
+
+--- const {(lang, t)} = Astro.props; ---
 
 <html lang={lang}>
     <head>
         <meta charset="UTF-8" />
-        <title>{t.homeTitle}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{t?.siteTitle || 'Autobiz4u'}</title>
+        <meta name="description" content={t?.siteDescription || 'Business Automation'} />
+        <link rel="stylesheet" href="/styles/global.css" />
     </head>
-    <body class="text-white bg-[#0f172a]">
-        <main class="min-h-screen px-6 py-12 text-center">
-            <slot />
-        </main>
-
-        <footer class="text-center text-sm py-6">
-            {t.footerText}
-        </footer>
+    <body class="bg-slate-900 text-white">
+        <slot />
+        <footer class="text-center text-sm mt-16 py-6 opacity-60">Autobiz4u. All rights reserved.</footer>
     </body>
 </html>
