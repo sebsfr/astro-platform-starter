@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import en from '../../locales/en.json';
+
+const lang = 'en';
+const t = en;
+---
+
+<BaseLayout lang={lang} t={t}>
+    <main class="container mx-auto px-4 py-16 text-center">
+        <h1 class="text-4xl font-bold mb-4">Automate Your Business, Effortlessly.</h1>
+        <p class="text-lg mb-8">Optimize your workflow and save valuable time with tailor-made automation solutions for your business.</p>
+
+        <div class="flex justify-center gap-4 mb-16">
+            <a href="#specializations" class="px-6 py-3 bg-blue-600 text-white rounded-lg">Discover Automation</a>
+            <a href="#contact" class="px-6 py-3 bg-gray-200 text-blue-600 rounded-lg">Book a Free Consultation</a>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6">Why Choose Automation?</h2>
+            <ul class="text-left max-w-xl mx-auto space-y-3">
+                <li>✅ <strong>Save Time:</strong> Reduce manual tasks and focus on growth.</li>
+                <li>✅ <strong>Cut Costs:</strong> Lower operational costs through efficiency.</li>
+                <li>✅ <strong>Reduce Errors:</strong> Minimize human error and increase accuracy.</li>
+                <li>✅ <strong>Scale Smoothly:</strong> Easily scale your processes as your business grows.</li>
+            </ul>
+        </section>
+
+        <section id="specializations" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6">My Specializations</h2>
+            <ul class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                <li>🤖 <strong>Automated Workflows:</strong> Streamline your daily tasks with powerful automation tools.</li>
+                <li>📅 <strong>Efficient Scheduling:</strong> Smart appointment booking and calendar integration.</li>
+                <li>📧 <strong>Email Automation:</strong> Personalized automated email sequences for customer engagement.</li>
+                <li>💼 <strong>CRM Integration:</strong> Connect and automate your customer relationship management system.</li>
+            </ul>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6">How Does It Work?</h2>
+            <ol class="list-decimal text-left max-w-xl mx-auto space-y-2 pl-6">
+                <li><strong>Book Your Free Consultation:</strong> Let's discuss your specific business needs.</li>
+                <li><strong>Tailored Automation Setup:</strong> I design and implement personalized solutions.</li>
+                <li><strong>Continuous Optimization:</strong> Ongoing support and adjustments to maximize efficiency.</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2 class="text-3xl font-semibold mb-4">Ready to Transform Your Business?</h2>
+            <p class="mb-6">Contact me today to explore how automation can boost your productivity.</p>
+            <a href="mailto:sebastiann.faron@gmail.com" class="px-6 py-3 bg-blue-600 text-white rounded-lg">Book Your Free Consultation</a>
+        </section>
+    </main>
+</BaseLayout>

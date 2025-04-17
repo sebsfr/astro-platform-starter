@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import pl from '../../locales/pl.json';
+
+const lang = 'pl';
+const t = pl;
+---
+
+<BaseLayout lang={lang} t={t}>
+    <main class="container mx-auto px-4 py-16 text-center">
+        <h1 class="text-4xl font-bold mb-4">{t.homeTitle}</h1>
+        <p class="text-lg mb-8">{t.homeSubtitle}</p>
+
+        <div class="flex justify-center gap-4 mb-16">
+            <a href="#specializations" class="px-6 py-3 bg-blue-600 text-white rounded-lg">{t.discoverBtn}</a>
+            <a href="#contact" class="px-6 py-3 bg-gray-200 text-blue-600 rounded-lg">{t.consultationBtn}</a>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6">{t.whyTitle}</h2>
+            <ul class="text-left max-w-xl mx-auto space-y-3">
+                <li>✅ <strong>{t.saveTimeTitle}</strong> {t.saveTimeText}</li>
+                <li>✅ <strong>{t.cutCostsTitle}</strong> {t.cutCostsText}</li>
+                <li>✅ <strong>{t.reduceErrorsTitle}</strong> {t.reduceErrorsText}</li>
+                <li>✅ <strong>{t.scaleSmoothlyTitle}</strong> {t.scaleSmoothlyText}</li>
+            </ul>
+        </section>
+
+        <section id="specializations" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6">{t.mySpecializations}</h2>
+            <ul class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                <li>🤖 <strong>{t.autoWorkflowsTitle}</strong> {t.autoWorkflowsText}</li>
+                <li>📅 <strong>{t.schedulingTitle}</strong> {t.schedulingText}</li>
+                <li>📧 <strong>{t.emailAutoTitle}</strong> {t.emailAutoText}</li>
+                <li>💼 <strong>{t.crmTitle}</strong> {t.crmText}</li>
+            </ul>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6">{t.howTitle}</h2>
+            <ol class="list-decimal text-left max-w-xl mx-auto space-y-2 pl-6">
+                <li><strong>{t.step1Title}</strong> {t.step1Text}</li>
+                <li><strong>{t.step2Title}</strong> {t.step2Text}</li>
+                <li><strong>{t.step3Title}</strong> {t.step3Text}</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2 class="text-3xl font-semibold mb-4">{t.contactTitle}</h2>
+            <p class="mb-6">{t.contactText}</p>
+            <a href="mailto:sebastiann.faron@gmail.com" class="px-6 py-3 bg-blue-600 text-white rounded-lg">{t.contactBtn}</a>
+        </section>
+    </main>
+</BaseLayout>
