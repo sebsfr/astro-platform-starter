@@ -1,17 +1,39 @@
 ---
-import '../../styles/globals.css';
+import '../styles/global.css';
 const { lang, t } = Astro.props;
 ---
 
+<!doctype html>
 <html lang={lang}>
     <head>
+        <!-- without this the browser will mis-decode your emojis -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{t.siteTitle || 'Autobiz4u'}</title>
         <meta name="description" content={t.siteDescription || 'Business Automation'} />
     </head>
     <body class="bg-slate-900 text-white">
+        <!-- HEADER -->
+        <header class="bg-slate-800">
+            <div class="container mx-auto flex items-center px-4 py-4">
+                <!-- logo always sticks at the left -->
+                <a href="/" class="flex items-center">
+                    <img src="/images/autobiz4u-logo.webp" alt="Autobiz4u Logo" class="h-12 w-auto mr-3" />
+                    <span class="ml-2 text-lg font-bold">Autobiz4u</span>
+                </a>
+
+                <!-- this nav will now sit in the exact center -->
+                <nav class="mx-auto space-x-6 text-sm">
+                    <a href="#specializations" class="hover:underline">Services</a>
+                    <a href="#contact" class="hover:underline">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
         <slot />
+
+        <!-- FOOTER -->
         <footer class="text-center text-sm mt-16 py-6 opacity-60">Autobiz4u. All rights reserved.</footer>
     </body>
 </html>
